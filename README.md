@@ -48,6 +48,8 @@ Este proyecto es parte de un examen tecnico solicitado como parte un proceso de 
     a. Se clonará el repositorio compartido y se probarán que funcionen cada uno de los puntos.
     b. Se pretende que la prueba funcione con tan solo clonar el repositorio o en su caso; incluir las instrucciones necesarias para que el proyecto funcione
 
+## Para comenzar
+
 ### Dependencias
 
 Este proyecto es una aplicación web, sin embargo, para funcionar en local es necesario:
@@ -57,9 +59,16 @@ Este proyecto es una aplicación web, sin embargo, para funcionar en local es ne
 * Composer/2.1.3
 * Laravel/9.0
 
-## Para comenzar
+### Instalaciones
+
+* Instalación de [XAMPP](https://www.apachefriends.org/es/download.html "XAMPP") (Recomendado para funcionamiento en localhost) 
+* Instalación de [Composer](https://getcomposer.org/download/ "Composer")
+* Instalación de [Laravel con Composer](https://laravel.com/docs/8.x/installation#installation-via-composer "Laravel con Composer")
+
+### Configurando el proyecto
 
 1. Una vez hayamos clonado el repositorio de este proyecto en local, debemos hacer los siguientes ajustes para que éste pueda correr en nuestro equipo.
+
 2. Instalar dependencias:
     * Para ello abriremos una terminal en la carpeta del proyecto y ejecutaremos:
     ```
@@ -69,7 +78,9 @@ Este proyecto es una aplicación web, sin embargo, para funcionar en local es ne
     ```
     npm install
     ```
+
 3. Es necesario crear un base de datos con el nombre "prueba" para que este proyecto funcione
+
 4. Crear el archivo .env
     * Por cuestiones de seguridad, este archivo no se incluye en el repositorio, por lo que es necesario generarlo: Se puede duplicar el archivo .env.example y añadir la siguiente configuracion:
     ```
@@ -86,17 +97,12 @@ Este proyecto es una aplicación web, sin embargo, para funcionar en local es ne
     ```
     php artisan key:generate
     ```
+
 6. Ejecutar migraciones
     * Por último, ejecutamos las migraciones para que se generen las tablas con:
     ```
     php artisan migrate 
     ```
-
-### Instalaciones
-
-* Instalación de [XAMPP](https://www.apachefriends.org/es/download.html "XAMPP") (Recomendado para funcionamiento en localhost) 
-* Instalación de [Composer](https://getcomposer.org/download/ "Composer")
-* Instalación de [Laravel con Composer](https://laravel.com/docs/8.x/installation#installation-via-composer "Laravel con Composer")
 
 ### Ejecutando servidor en local
 
