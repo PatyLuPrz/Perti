@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/usuarios', [App\Http\Controllers\ApiController::class, 'index'])->name('api.get');
+
+Route::post('/usuarios/create', [App\Http\Controllers\ApiController::class, 'create'])->name('api.create');
+
+Route::post('/usuarios/{id}/edit',[App\Http\Controllers\ApiController::class,'edit'])->name('edit');
+
+Route::get('/usuarios/{id}',[App\Http\Controllers\ApiController::class,'show'])->name('api.show');
+
